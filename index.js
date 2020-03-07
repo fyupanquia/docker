@@ -10,9 +10,9 @@ const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/admin';
 app.get('/', (req, res) => {
   MongoClient.connect(mongoUrl, { useNewUrlParser: true }, (err, db) => {
     if (err) {
-      res.status(500).send('💥 :"v!! 💥: ' + err);
+      res.status(500).send('💥 BOOM 💥: ' + err);
     } else {
-      res.send('DB CONNECTEDDDD! 😎');
+      res.send('Me conecté a la DB! 😎');
       db.close();
     }
   });
